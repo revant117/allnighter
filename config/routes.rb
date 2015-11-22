@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  
+  get 'items/index'
+
+  devise_for :users , controllers: {registrations: "registrations"}
+  resources :items
+
   root 'static_pages#home'
 
   get '/help', to: 'static_pages#help'
