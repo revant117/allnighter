@@ -28,7 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "nokogiri", ">= 1.6.7.rc"
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt'
+gem 'bcrypt'
 
 gem "devise"
 gem "figaro"
