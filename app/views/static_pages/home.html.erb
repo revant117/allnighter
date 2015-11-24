@@ -1,9 +1,12 @@
 
 <div class="row">
 
-<% @item.each do |i| %>
+<% @hotel.each do |i| %>
 <h2><%= i.name%></h2>
-<h3><%= i.description %> </h3>
+<h3><%= i.contact %> </h3>
+<h3><%= i.id %></h3>
+<%= link_to "Show" , i %>
+<%= link_to "Delete" , i , method: :delete %>
 
 <% end %>
 

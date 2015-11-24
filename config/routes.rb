@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   get 'items/index'
 
   devise_for :users , controllers: {registrations: "registrations"}
-  resources :items
+  resources :hotels
 
   root 'static_pages#home'
 
-  get '/help', to: 'static_pages#help'
+  get '/help', to: 'static_pages#help' , as: 'help' 
   #get 'static_pages/help' does the same stuff
   
 end

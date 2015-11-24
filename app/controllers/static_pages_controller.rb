@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-  	@item = Item.all
+  	@hotel = Hotel.all
   end
 
   def help

@@ -42,5 +42,10 @@ Rails.application.configure do
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
+
+
+  Paperclip.options[:command_path] = 'C:/Program Files/ImageMagick-6.9.2-Q16'
+
+  Paperclip.options[:command_path] = 'C:/Program Files (x86)/GnuWin32/bin'
    
 end

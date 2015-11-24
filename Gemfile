@@ -32,6 +32,9 @@ gem "nokogiri", ">= 1.6.7.rc"
 
 gem "devise"
 gem "figaro"
+gem "paperclip"
+gem "cocoon"
+gem 'simple_form'
 
 
 # Use Unicorn as the app server

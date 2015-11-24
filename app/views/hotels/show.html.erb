@@ -1,8 +1,8 @@
 <h1>
-	name = <%= @item.name %>
+	name = <%= @hotel.name %>
 </h1>
 
-description = <%= @hotel.description %>
+description = <%= @hotel.contact %>
 
 <p>
 :id = <%= @hotel.id%>
@@ -13,9 +13,7 @@ description = <%= @hotel.description %>
 	Helper accessing the hotel === <%= add @hotel %>
 </p>
 
-<p> 
-<%= image_tag @hotel.image.url %>
-</p>
+
 
 <%= link_to "Edit" , edit_hotel_path %>
 <%= link_to "Delete" , hotel_path , method: :delete %>
