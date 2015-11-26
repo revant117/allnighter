@@ -1,4 +1,4 @@
-<!-- <h2>Sign up</h2>
+<h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -6,6 +6,11 @@
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
   </div>
 
   <div class="field">
@@ -26,9 +31,9 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %> -->
+<%= render "devise/shared/links" %>
 
-<form class="form-horizontal">
+<!-- <form class="form-horizontal">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -60,7 +65,7 @@
 
      <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        
+
         <%= f.submit "Sign up" %>
         <% end %>
       </div>
@@ -69,4 +74,4 @@
 
 <%= render "devise/shared/links" %>
 
-</form>
+</form> -->

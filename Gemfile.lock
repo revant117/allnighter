@@ -182,6 +182,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bcrypt
   bootstrap-sass
   byebug
   cocoon
