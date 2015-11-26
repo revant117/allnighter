@@ -1,14 +1,11 @@
-
 <div class="row">
-
-<% @hotel.each do |i| %>
-<h2><%= i.name%></h2>
-<h3><%= i.contact %> </h3>
-<h3><%= i.id %></h3>
-<%= link_to "Show" , i %>
-<%= link_to "Delete" , i , method: :delete %>
-
-<% end %>
-
-
+	<div class="col-md-12">
+		<% @hotel.each do |i| %>
+			<h2><%= i.name%></h2>
+			<h3><%= i.contact %> </h3>
+			<h3><%= i.id %></h3>
+			<%= link_to "Show" , i %>
+			<%= link_to "Delete" , i , method: :delete %>
+		<% end %>
+	</div>
 </div>

@@ -27,8 +27,8 @@ module Mak1
       :address              => 'smtp.gmail.com',
       :port                 => 587,
       # :domain               => "gmail.com",
-      :user_name            => ENV["email"],
-      :password             => ENV["password"],
+      :user_name            => 'revant.k.jha@gmail.com',
+      :password             => 'mangafox',
       :authentication       => 'login',
       :enable_starttls_auto => true
 }
