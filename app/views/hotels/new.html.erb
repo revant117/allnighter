@@ -1,42 +1,48 @@
-
-
-<h2>
-	Add Hotel
-</h2>
-
+<div class="row top-buffer"></div>
 <div class="container-fluid">
-	<div class="row col-lg-12">
-		<div class="form-horizontal">
-			<%= simple_form_for @hotel do |f| %>
-				<div class="form-group">
-					<%= f.input :name, input_wrap_html: { class: "col-lg-10"} ,label_html: { class: "col-lg-2 control-label"}, label: "<span> Hotel Name </span>".html_safe %>
-				</div>
-				<div class="form-group">
-					<%= f.input :contact, input_wrap_html: { class: "col-lg-10"} ,label_html: { class: "col-lg-2 control-label"}, label: "<span>Contact</span>".html_safe %>
-				</div>
+	<div class = "row">
+		<div class = "col-md-6 col-md-offset-3">
+			<legend>Add Hotel</legend>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="well bs-component">
+				<legend>Hotel Details</legend>
+				<%= simple_form_for @hotel do |f| %>
+					<div class="form-group">
+						<%= f.input :name, input_html: { class: "form-control", placeholder: "Enter Hotel Name"} ,label_html: { class: "control-label"}, label: "<span> Hotel Name </span>".html_safe %>
+					</div>
+					<div class="form-group">
+						<%= f.input :contact, input_html: { class: "form-control", placeholder: "Enter Contact Info"}, label_html: { class: "control-label"}, label: "<span>Contact</span>".html_safe %>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="row top-buffer"></div>
+	<div class = "row">
+		<div class = "col-md-6 col-md-offset-3">
+			<legend>Items</legend>
 		</div>
 	</div>
 
-	<div class = 'row'>
-		<div class = 'col-md-6'>
-		<h2>
-			Items
-		</h2>
-
-	  <%= f.simple_fields_for :items do |i| %>
-	    <%= render 'item_fields', :f => i %>
-	  <% end %>
-	  <%= link_to_add_association 'Add Item', f, :items %>
-
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<%= link_to_add_association 'Add Item', f, :items %>
+		    <%= f.simple_fields_for :items do |i| %>
+		    	<%= render 'item_fields', :f => i %>
+		    <% end %>
+		</div>
 	</div>
-</div>
-
-
-
-<%= f.submit %>
+	<div class="row top-buffer"></div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<%= f.submit ( f.object.new_record? ? "Create Hotel" : "Create Hotel"), class: "btn btn-default btn-primary" %>
+		</div>
+	</div>
 <% end %>
 
-
+<div class="row top-buffer"></div>
 
 </div>
 
