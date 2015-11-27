@@ -2,6 +2,9 @@
 @import "bootstrap";
 @import "vendors/yeti/bootstrap_yeti.css";
 
+html, body {
+  height: 100%;
+}
 
 #logo {
   float: left;
@@ -17,17 +20,17 @@
 
 .footer{
   position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #f5f5f5;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
 }
 
 #wrap {
   min-height: 100%;
-  height: auto;
+  height: auto !important;
   margin: 0 auto -60px;
-  padding: 0 0 60px;
+  padding: 0 auto 60px auto;
 }
 
 #footer {
@@ -37,4 +40,16 @@
 
 .top-buffer {
   padding-top: 4em;
+}
+
+.remember {
+  margin-top: 5px !important;
+}
+
+.anchor-btn > *  {
+  color: #fff !important;
+}
+
+.anchor-btn > *:hover  {
+  text-decoration: none;
 }

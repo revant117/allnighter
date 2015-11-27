@@ -1,23 +1,18 @@
 <div class="row">
-	<div class="col-md-12">
-		<% @hotel.each do |i| %>
-			<h2><%= i.name%></h2>
-			<h3><%= i.contact %> </h3>
-			<h3><%= i.id %></h3>
-			<%= link_to "Show" , i %>
-			<%= link_to "Delete" , i , method: :delete %>
-		<% end %>
+	<div class="col-md-8 col-md-offset-2">
+		<div class="well">
+			<legend>Our Hotels</legend>
+			<% @hotel.each do |i| %>
+				<div class="form-group">
+				<h2><%= i.name%></h2>
+				<h3><%= i.contact %> </h3>
+				<h3><%= i.id %></h3>
+				<%= link_to "Show" , i %>
+				<%= link_to "Delete" , i , method: :delete %>
+				</div>
+			<% end %>
+		</div>
 	</div>
 </div>
 
-<% @hotel.each do |i| %>
-<h2><%= i.name %></h2>
-<h3><%= i.contact %> </h3>
-<h3><%= i.id %></h3>
-<%= link_to "Show" , i %>
-<%= link_to "Delete" , i , method: :delete %>
-
-<% end %>
-
-
-</div>
+<div class="row top-buffer"></div>
