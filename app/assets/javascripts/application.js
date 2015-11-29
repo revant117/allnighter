@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require_tree .
 //= require cocoon
+function ajax(type, url, postData, callback){
+ $.ajax({
+   url: url,
+   type: type,
+   data: postData,
+  success: callback
+ });
+}
