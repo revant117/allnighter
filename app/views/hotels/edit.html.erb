@@ -1,5 +1,5 @@
 <h2>
-	Edit 
+	Edit
 </h2>
 
 <div>
@@ -15,7 +15,7 @@
 	</h2>
 
   <%= f.simple_fields_for :items do |i| %>
-    <%= render 'item_fields', :f => i %>
+    <%= render 'item_fields', f: i %>
   <% end %>
   <%= link_to_add_association 'Add Item', f, :items %>
 

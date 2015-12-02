@@ -1,4 +1,4 @@
-
+var myCart = {};
  $("#data" ).empty();
  $("#data").append("<h1>Menu </h1><% @i.items.each do |ing| %> <div data-id='<%= ing.id %>'> <h2><%= ing.name %></h2> <h3><%= ing.price %> </h3> <h3><%= ing.ava %></h3> <input class = 'number' type = 'number'></input><button class = 'cart'> add to cart </button></div><% end %>");
 
@@ -12,12 +12,17 @@ addToCart.on("click", function(e){
   var quantity = $('.number').val();
   var id = $(this).parent().data("id");
   var name = $(this).siblings()[0].innerText;
-  ajax('post', '/', {"quantity":quantity, "itemId":id}, function(response){
+  ajax('post', '/', {"quantity":quantity, "itemId":id , "ItemName":name}, function(response){
     showInCart(response.id, response.qty, name, price);
   });
 });
 
 function showInCart(id, quantity, name, price){
+  // if(myCart.hasOwnProperty(name)){
+  //   myCart[name] += quantity;
+  // }else{
+  //   myCart[name] = quantity;
+  // }
   $('.myCart').append('<div data-id='+id+' ><h2>'+name+'</h2><h3>quantity : '+quantity+'</h3></div>');
   changePrice(price * quantity);
 }
