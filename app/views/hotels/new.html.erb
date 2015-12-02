@@ -19,7 +19,10 @@
   <%= f.simple_fields_for :items do |i| %>
     <%= render 'item_fields', f: i %>
   <% end %>
+	  <div class='links'>
   <%= link_to_add_association 'Add Item', f, :items %>
+</div>
+
 
 	</div>
 </div>

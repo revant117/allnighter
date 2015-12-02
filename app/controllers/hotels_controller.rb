@@ -12,7 +12,7 @@ before_action :find_hotel , only: [:show  , :edit , :destroy , :update]
   def create
   	@hotel = Hotel.new(hotel_params)
   	if @hotel.save
-  		redirect_to help_path
+  		redirect_to root_path
   		# redirect_to hotel_url(@hotel) same as
   	else
   		render 'new'

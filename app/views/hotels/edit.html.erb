@@ -15,7 +15,9 @@
 	</h2>
 
   <%= f.simple_fields_for :items do |i| %>
+	  <div class='links'>
     <%= render 'item_fields', f: i %>
+	</div>
   <% end %>
   <%= link_to_add_association 'Add Item', f, :items %>
 
