@@ -1,0 +1,28 @@
+  <div class="myCart">
+    <!-- <button type="button" id='getFood'>Get me my FOOD!</button> -->
+  <%=  link_to "Get Food", controller: "static_pages", action: "mailer" %>
+    <h3 id="total"></h3>
+  </div>
+  <div class="row">
+
+
+ <!--  Just to test the ajac functionality
+ <%= form_for(root_path, :method => "post", html: {id: "test_form" } , remote: true) do %>
+<%= text_field_tag :search, params[:search], placeholder: "Displaythis" %>
+<%= submit_tag "Search" %>
+<% end %> -->
+
+
+
+
+   <%= form_for( root_path , :method => "post", html: {id: "test_form" } , remote: true) do |f|  %>
+    <!-- <%= f.collection_select :id , @hotel, :id, :name,  {:include_blank => 'Please Select The Hotel'} %> -->
+    <%= select_tag 'id', options_from_collection_for_select(@hotel, :id, :name) , {:include_blank => 'Please Select The Hotel'} %>
+    <%= submit_tag "Go!" %>
+  <% end %>
+
+
+  <div id = "data">
+
+  </di>
+</div>
