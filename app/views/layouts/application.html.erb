@@ -7,13 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/header' %>
-    
-    <div class="container-fluid">
-      <%= yield %>
-    </div>
-
-  <%= render 'layouts/footer' %>
-
+	<div id="wrap">
+  		<%= render 'layouts/header' %>
+        <div class="container-fluid">
+	      <%= yield %>
+	    </div>
+	</div>
+	<%= render 'layouts/footer' %>
 </body>
 </html>

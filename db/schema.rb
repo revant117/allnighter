@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20151129122548) do
 
   create_table "hotels", force: :cascade do |t|
     t.string   "name"
-    t.string   "contact"
+    t.text     "contact"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

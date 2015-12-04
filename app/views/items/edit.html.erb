@@ -1,32 +1,49 @@
-<h2>
-	Edit 
-</h2>
-
-<div>
-<%= simple_form_for @hotel do |f| %>
-  <%= f.input :name %>
-  <%= f.input :contact %>
-
-
-<div class = 'row'>
-	<div class = 'col-md-6'>
-	<h2>
-		Items
-	</h2>
-
-  <%= f.simple_fields_for :items do |i| %>
-    <%= render 'items_fields', :f => item %>
-  <% end %>
-  <%= link_to_add_association 'Add Item', f, :items %>
-
+<div class="row top-buffer"></div>
+<div class="container-fluid">
+	<div class = "row">
+		<div class = "col-md-6 col-md-offset-3">
+			<legend>Edit Hotel</legend>
+		</div>
 	</div>
-</div>
+	<%= simple_form_for @hotel do |f| %>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="well">
+				<legend>Hotel Details</legend>
+					<div class="form-group">
+						<%= f.input :name, input_html: { class: "form-control", placeholder: "Enter Hotel Name"} ,label_html: { class: "control-label"}, label: "<span> Hotel Name </span>".html_safe %>
+					</div>
+					<div class="form-group">
+						<%= f.input :contact, input_html: { class: "form-control", placeholder: "Enter Contact Info"}, label_html: { class: "control-label"}, label: "<span>Contact</span>".html_safe %>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="row top-buffer"></div>
+	<div class = "row">
+		<div class = "col-md-6 col-md-offset-3">
+			<legend>Items</legend>
+		</div>
+	</div>
 
-
-
-<%= f.submit %>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="links">
+				<%= link_to_add_association 'Add Item', f, :items %>
+			</div>
+		    	<%= f.simple_fields_for :items do |i| %>
+		    	<%= render 'item_fields', :f => item %>
+		    <% end %>
+		</div>
+	</div>
+	<div class="row top-buffer"></div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<%= f.submit "Update Hotel", class: "btn btn-default btn-primary" %>
+		</div>
+	</div>
 <% end %>
 
-
-
+<div class="row top-buffer"></div>
+<div class="row top-buffer"></div>
 </div>

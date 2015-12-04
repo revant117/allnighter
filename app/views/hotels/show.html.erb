@@ -1,26 +1,27 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="well bs-component">
+			<legend>name = <%= @hotel.name %></legend>
+
+			description = <%= @hotel.contact %>
+
+		<p>
+		:id = <%= @hotel.id%>
+
+		</p>
+
+		<p>
+			Helper accessing the hotel === <%= add @hotel %>
+		</p>
 
 
 
-<h1>
-	name = <%= @hotel.name %>
-</h1>
+		<%= link_to "Edit" , edit_hotel_path %>
+		<%= link_to "Delete" , hotel_path , method: :delete %>
 
-description = <%= @hotel.contact %>
-
-<p>
-:id = <%= @hotel.id%>
-
-</p>
-
-<p>
-	Helper accessing the hotel === <%= add @hotel %>
-</p>
-
-
-
-<%= link_to "Edit" , edit_hotel_path %>
-<%= link_to "Delete" , hotel_path , method: :delete %>
-
-<h1>
-	Bam!
-</h1>
+		<h1>
+			Bam!
+		</h1>	
+		</div>
+	</div>
+</div>

@@ -1,6 +1,10 @@
 var myCart = {};
  $("#data" ).empty();
- $("#data").append("<h1>Menu </h1><% @i.items.each do |ing| %> <div data-id='<%= ing.id %>'> <h2><%= ing.name %></h2> <h3><%= ing.price %> </h3> <h3><%= ing.ava %></h3> <input class = 'number' type = 'number'></input><button class = 'cart'> add to cart </button></div><% end %>");
+ $("#data").append("<div class='row'><legend>Menu </legend><% @i.items.each do |ing| %> 
+  <div data-id='<%= ing.id %>'> <h2><%= ing.name %></h2> 
+  <h3><%= ing.price %> </h3> <h3><%= ing.ava %></h3> 
+  <input class = 'number' type = 'number'></input>
+  <button class = 'cart'> add to cart </button></div><% end %></div>");
 
 var addToCart = $('.cart');
 addToCart.on("click", function(e){
