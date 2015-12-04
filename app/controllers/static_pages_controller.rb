@@ -18,7 +18,14 @@ class StaticPagesController < ApplicationController
     if @qty && @itemId
 
       if session.has_key?(@itemName)
-        session[@itemName] += @qty
+
+        puts   session[@itemName]
+        puts   @qty
+        @t =  Integer(session[@itemName]) + Integer(@qty)
+        puts @t
+
+        session[@itemName] = @t
+
 
 
 
@@ -39,6 +46,13 @@ class StaticPagesController < ApplicationController
     elsif @var
         session[:id] = @var
        @i = Hotel.find( @var)
+       @item = @i.items.map(&:name)
+       @item.each do |item|
+         if session.has_key?(item)
+           session[item] = nil
+
+         end
+       end
        puts @i
        respond_to do |format|
          format.html
@@ -62,12 +76,13 @@ class StaticPagesController < ApplicationController
     @item.each do |item|
       if session.has_key?(item)
         @maildata[item] = session[item]
-        puts
+
       end
     end
     @user = current_user
+    puts @maildata
 
-     StaticPagesMailer.order_confirmation(@user , @maildata).deliver
+    #  StaticPagesMailer.order_confirmation(@user , @maildata).deliver
   end
 
 
