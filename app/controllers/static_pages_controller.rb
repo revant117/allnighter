@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   def home
   	@hotel = Hotel.all
     @var = params[:id]
+    @user = current_user
 
 
     @itemId = params[:itemId]
