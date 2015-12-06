@@ -1,5 +1,5 @@
 class HotelsController < ApplicationController
-
+before_action :if_admin
 before_action :find_hotel , only: [:show  , :edit , :destroy , :update]
 
   def index
@@ -49,4 +49,13 @@ def hotel_params
 	params.require(:hotel).permit(:name , :contact , items_attributes: [:id , :name ,:description ,:image ,:price,:ava,:_destroy ])
 end
 
+def if_admin
+  # if !current_user.admin?
+  #   redirect_to root_path
+  #
+  # end
+  if !current_user.try(:admin?)
+    redirect_to root_path
+end
+end
 end

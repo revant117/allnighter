@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   match "/confirmation" => "static_pages#mailer" , via: [:get] , as: "confirmation"
 
   get '/help', to: 'static_pages#help' , as: 'help'
+
+  get '/users/sign_in' , as: 'signIn'
   #get 'static_pages/help' does the same stuff
 
 end

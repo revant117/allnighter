@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
 
-# before_action :authenticate_user!, only: [:mailer]
+before_action :auth, only: [:mailer]
 
   def home
   	@hotel = Hotel.all
@@ -84,6 +84,14 @@ class StaticPagesController < ApplicationController
     puts @maildata
 
     #  StaticPagesMailer.order_confirmation(@user , @maildata).deliver
+  end
+
+  private
+
+  def auth
+    if !current_user
+      redirect_to signIn_path
+    end
   end
 
 
