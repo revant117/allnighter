@@ -11,44 +11,29 @@ before_action :auth, only: [:mailer]
     @bur = @hotel.items.where(:id => 40..43)
     @ind = @hotel.items.where(:id => 44..45)
     @par = @hotel.items.where(:id => 46..48)
-    @mag = @hotel.items.where(:id => 49..48)
+    @mag = @hotel.items.where(:id => 49..50)
     @drinks = @hotel.items.where(:id => 51..53 ,:id => 56..57)
     #================================
 
-
-    @itemId = params[:itemId]
     @qty = params[:quantity]
     @itemName = params[:ItemName]
-
-
-    puts @qty
-    puts @var
-    puts @itemId
-    if @qty && @itemId
-
+    @price = params[:price]
+    @remove = params[:remove]
+    @items = params[:items];
+    puts @items
+    if @qty && @itemName
       if session.has_key?(@itemName)
-
-        puts   session[@itemName]
-        puts   @qty
         @t =  Integer(session[@itemName]) + Integer(@qty)
-        puts @t
-
         session[@itemName] = @t
-
-
-
-
       else
         session[@itemName] = @qty
-
-
       end
-
       respond_to do |format|
         format.json do
            render json: {
              qty:@qty,
-             id:@itemId
+             name:@itemName,
+             price:@price,
            }.to_json
          end
         end
@@ -62,7 +47,6 @@ before_action :auth, only: [:mailer]
 
          end
        end
-       puts @i
        respond_to do |format|
          format.html
          format.js

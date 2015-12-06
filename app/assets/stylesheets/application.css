@@ -13,10 +13,3 @@
  *= require_tree .
  *= require_self
  */
-#getFood{
-  display: none;
-}
-
-/*.to_white{
-  color : white;
-}*/
