@@ -1,148 +1,346 @@
-<div class="container-fluid">
-	<div class="items col-md-7 col-md-offset-1 col-xs-7 col-xs-offset-1">
-		<div class="well row">
-			<legend>Sandwiches</legend>
-			<div class="grid-card">
-			  <% @sand.each do |sand|%>
-					<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
-						<img src = <%= sand.image%> />
-						<div class="caption">
-							<legend class='name'><%= sand.name%></legend>
-							<h4>Price : </h4>
-							<h4 class= 'price'> <%= sand.price%> </h4>
-							<h4> Rs </h4>
-							<div>
-								<div class="form-group">
-									<input class = 'number form-control' min="0" type = 'number'></input>
-								</div>
-								<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
-							</div>
-						</div>
-					</div>
-				<%end%>
-			</div>
-		</div>
-		<div class="well row">
-			<legend>Burgers</legend>
-			<div class="grid-card">
-				<% @bur.each do |bur|%>
-					<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
-						<img src = <%= bur.image%> />
-						<div class="caption">
-							<legend class='name'><%= bur.name%></legend>
-							<h4>Price : </h4>
-							<h4 class= 'price'> <%= bur.price%> </h4>
-							<h4> Rs </h4>
-							<div>
-								<div class="form-group">
-									<input class = 'number form-control' min="0" type = 'number'></input>
-								</div>
-								<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
-							</div>
-						</div>
-					</div>
-				<%end%>
-			</div>
-		</div>
-		<div class="well row">
-			<legend>Indian Buns</legend>
-			<div class="grid-card">
-			  <% @ind.each do |ind|%>
-					<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
-						<img src = <%= ind.image%> />
-						<div class="caption">
-							<legend class='name'><%= ind.name%></legend>
-							<h4>Price : </h4>
-							<h4 class= 'price'> <%= ind.price%> </h4>
-							<h4> Rs </h4>
-							<div>
-								<div class="form-group">
-									<input class = 'number form-control' min="0" type = 'number'></input>
-								</div>
-								<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
-							</div>
-						</div>
-					</div>
-				<%end%>
-			</div>
-		</div>
-		<div class="well row">
-			<legend>Paratha</legend>
-			<div class="grid-card">
-				<% @par.each do |par|%>
-					<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
-						<img src = <%= par.image%> />
-						<div class="caption">
-							<legend class='name'><%= par.name%></legend>
-							<h4>Price : </h4>
-							<h4 class= 'price'> <%= par.price%> </h4>
-							<h4> Rs </h4>
-							<div>
-								<div class="form-group">
-									<input class = 'number form-control' min="0" type = 'number'></input>
-								</div>
-								<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
-							</div>
-						</div>
-					</div>
-				<%end%>
-			</div>
-		</div>
-		<div class="well row">
-			<legend>Maggi</legend>
-			<div class="grid-card">
-			  <% @mag.each do |mag|%>
-					<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
-						<img src = <%= mag.image%> />
-						<div class="caption">
-							<legend class='name'><%= mag.name%></legend>
-							<h4>Price : </h4>
-							<h4 class= 'price'> <%= mag.price%> </h4>
-							<h4> Rs </h4>
-							<div>
-								<div class="form-group">
-									<input class = 'number form-control' min="0" type = 'number'></input>
-								</div>
-								<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
-							</div>
-						</div>
-					</div>
-				<%end%>
-			</div>
-		</div>
-		<div class="well row">
-			<legend>Drinks</legend>
-			<div class="grid-card">
-				<% @drinks.each do |drinks|%>
-					<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
-						<img src = <%= drinks.image%> />
-						<div class="caption">
-							<legend class='name'><%= drinks.name%></legend>
-							<h4>Price : </h4>
-							<h4 class= 'price'> <%= drinks.price%> </h4>
-							<h4> Rs </h4>
-							<div class="">
-								<div class="form-group">
-									<input class = 'number form-control' min="0" type = 'number'></input>
-								</div>
-								<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
-							</div>
-						</div>
-					</div>
-				<%end%>
-			</div>
-		</div>
-	</div>
-	<div class="myCart cart-container col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1 well side-padded">
-		<legend>Cart</legend>
-		<div class="items">
-		</div>
-		<h3 class="total">Cart Empty</h3>
-		<button type="button" class="getFood anchor-btn btn btn-primary" name="button">
-			Order Food
-		</button>
-	</div>
-	<div class="row top-buffer">
 
+
+<div class="container-fluid">
+<div class="container-fluid">
+<div class="items col-md-7 col-md-offset-1 col-xs-7 col-xs-offset-1">
+<div class="well row">
+<legend>Sandwiches</legend>
+<div class="grid-card">
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/KtMkVaQ.jpg" />
+		<div class="caption">
+			<legend class='name'>Cheese Corn Sandwich </legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 50 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/HUTqcSA.jpg" />
+		<div class="caption">
+			<legend class='name'>Paneer Tikka Sandwich</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 60 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/G5H6KwP.jpg" />
+		<div class="caption">
+			<legend class='name'>Mint Cottage Cheese Sandwich</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 70 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/SfKPkxk.jpg" />
+		<div class="caption">
+			<legend class='name'>Club Sandwhich</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 60 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/SfKPkxk.jpg" />
+		<div class="caption">
+			<legend class='name'>Chicken Pesto Sandwich</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 70 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/OYAfykz.jpg" />
+		<div class="caption">
+			<legend class='name'>Grilled Chicken Sandwich</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 70 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/OYAfykz.jpg" />
+		<div class="caption">
+			<legend class='name'>Egg Salad Sandwich</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 60 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
 	</div>
 </div>
+</div>
+<div class="well row">
+<legend>Burgers</legend>
+<div class="grid-card">
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/qHiuo8v.jpg" />
+		<div class="caption">
+			<legend class='name'>Veg Cheese Burger </legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 60 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/iUjJdCw.jpg" />
+		<div class="caption">
+			<legend class='name'>Veg Burger</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 50 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/qPtnTpw.jpg" />
+		<div class="caption">
+			<legend class='name'>Sinful Cheese Burger (3 Cheese )</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 70 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/iF1rBEu.jpg" />
+		<div class="caption">
+			<legend class='name'>Chicken Burger </legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 80 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="well row">
+<legend>Indian Buns</legend>
+<div class="grid-card">
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/Rw3Pyoi.jpg" />
+		<div class="caption">
+			<legend class='name'>Pav Sandwich</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 35 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/cl94LQg.jpg" />
+		<div class="caption">
+			<legend class='name'>Masala Pav</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 30 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="well row">
+<legend>Paratha</legend>
+<div class="grid-card">
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/g4KTdpa.jpg" />
+		<div class="caption">
+			<legend class='name'>Aloo Paratha</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 30 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/UjPOJDz.jpg" />
+		<div class="caption">
+			<legend class='name'>Thepla</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 30 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/Ji0ijSP.jpg" />
+		<div class="caption">
+			<legend class='name'>Paneer Paratha</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 35 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="well row">
+<legend>Maggi</legend>
+<div class="grid-card">
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/mExCMi3.jpg" />
+		<div class="caption">
+			<legend class='name'>Masala Maggi</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 25 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/eFVNZh5.jpg" />
+		<div class="caption">
+			<legend class='name'>Cheese Maggie</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 30 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div>
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="well row">
+<legend>Drinks</legend>
+<div class="grid-card">
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/currgkB.jpg" />
+		<div class="caption">
+			<legend class='name'>Cold Cofee</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 30 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div class="">
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-3 col-xs-6 thumbnail padded">
+		<img src = "http://i.imgur.com/kDvwTGU.png" />
+		<div class="caption">
+			<legend class='name'>Juice (Real Juice Mixes)</legend>
+			<h4 class="inline-label">Price : </h4>
+			<h4 class= 'price inline-label'> 30 </h4>
+			<h4 class="inline-label"> Rs </h4>
+			<div class="">
+				<div class="form-group">
+					<input class = 'number form-control' min="0" type = 'number'></input>
+				</div>
+				<button class = 'cart btn btn-default btn-primary stretched'> Add To Cart </button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div class="myCart cart-container col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1 well side-padded">
+<legend>Cart</legend>
+<div class="items">
+</div>
+<h3 class="total">Cart Empty</h3>
+<button type="button" class="getFood anchor-btn btn btn-primary" name="button">
+Order Food
+</button>
+</div>
+<div class="row top-buffer">

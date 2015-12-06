@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # root 'static_pages#home'
   match "/" => "static_pages#home", via: [:get, :post] , as: "root"
-  match "/confirmation" => "static_pages#mailer" , via: [:get] , as: "confirmation"
+  match "/confirmation" => "static_pages#mailer" , via: [:get , :post] , as: "confirmation"
 
   get '/help', to: 'static_pages#help' , as: 'help'
 

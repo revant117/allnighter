@@ -1,15 +1,20 @@
 class StaticPagesMailer < ApplicationMailer
   #  before_action :authenticate_user!
-   def order_confirmation(user , ord)
-     @user = user
-     @order = ord
-     @message = nil
-     @order.each do |order|
-      @message += order + "::"
-     end
-     puts @message
+   def order_confirmation(a,b,c,d)
+    #  @user = user
 
-    #  mail(to: @user.email , subject: "test" ,)
+     @msg = b + "::" + c + "::" + d + ":: order ::" + a
+    #  @message = nil
+    #  @order.each do |order|
+    #   @message += order + "::"
+    #  end
+    #  puts @message
+    puts @msg
+
+     mail(to: "revantjha.94@gmail.com" , subject: "test" , body: @msg)
+
+  
+
    end
 
 end

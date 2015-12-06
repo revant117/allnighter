@@ -144,4 +144,24 @@ $(document).ready(function(){
   $('.getFood').on('click', function(){
       sendData();
   });
+
+  var mail = $('.mail');
+
+  mail.on("click", function(e){
+
+    var name = $(".na").val();
+    console.log(name)
+    var address = $(".ad").val();
+    var email =  $(".em").val();
+    var phone =  $(".ph").val();
+
+    ajax('post', '/confirmation', {"name":name, "add":address, "email":email, "phone": phone} , function(){
+        $(".confirmation-container").html("<div class='form-group'><h3>Order sent, we will contact you soon</h3></div> ")
+
+    } );
+
+
+
+  });
+
 });

@@ -1,5 +1,5 @@
 class HotelsController < ApplicationController
-before_action :if_admin
+# before_action :if_admin
 before_action :find_hotel , only: [:show  , :edit , :destroy , :update]
 
   def index
