@@ -3,8 +3,13 @@ class StaticPagesMailer < ApplicationMailer
    def order_confirmation(user , ord)
      @user = user
      @order = ord
+     @message = nil
+     @order.each do |order|
+      @message += order + "::"
+     end
+     puts @message
 
-     mail(to: @user.email , subject: "test")
+    #  mail(to: @user.email , subject: "test" ,)
    end
 
 end

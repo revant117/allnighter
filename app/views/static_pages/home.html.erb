@@ -1,19 +1,51 @@
-<div class="container-fluid">
-	<div class="col-md-8 col-md-offset-2">
-		<div class="row">
-			<div class="well">
-				<legend>Our Hotels</legend>
-				<% @hotel.each do |i| %>
-					<div class="form-group">
-					<h2><%= i.name%></h2>
-					<h3><%= i.contact %> </h3>
-					<h3><%= i.id %></h3>
-					<%= link_to "Show" , i %>
-					<%= link_to "Delete" , i , method: :delete %>
-					</div>
-				<% end %>
-			</div>
-		</div>
+<div class="items">
+		<h1>Sandwiches</h1>
+	  <% @sand.each do |sand|%>
+		<%= sand.name%>
+		<img src = <%= sand.image%> />
+		<input class = 'number' type = 'number'></input>
+		<button class = 'cart'> Add To Cart </button>
+		<%end%>
+</div>
+
+<div class="well">
+	<h1>Burgers</h1>
+	<% @bur.each do |bur|%>
+	<%= bur.name%>
+	<div class="col-md-6 thumb">
+		<img src = <%= bur.image%> />
+	</div>
+	<input class = 'number' type = 'number'></input>
+	<button class = 'cart'> Add To Cart </button>
+	<%end%>
+</div>
+
+<div>
+<h1>Sandwiches</h1>
+<% @ind.each do |ind|%>
+<%= ind.name%>
+<%end%>
+</div>
+<div>
+<h1>Sandwiches</h1>
+<% @par.each do |par|%>
+<%= par.name%>
+<%end%>
+</div>
+<div>
+<h1>Sandwiches</h1>
+<% @mag.each do |mag|%>
+<%= mag.name%>
+<%end%>
+</div>
+
+<div>
+<h1>Sandwiches</h1>
+<% @drinks.each do |drinks|%>
+<%= drinks.name%>
+<%end%>
+</div>
+
 
 	<div class="row top-buffer"></div>
 
@@ -23,6 +55,7 @@
 	    <h3 id="total"></h3>
 	  </div>
 	  <div class="row">
+		</div>
 
 
 	 <!--  Just to test the ajac functionality
@@ -30,20 +63,3 @@
 	<%= text_field_tag :search, params[:search], placeholder: "Displaythis" %>
 	<%= submit_tag "Search" %>
 	<% end %> -->
-
-
-
-
-	   <%= form_for( root_path , :method => "post", html: {id: "test_form" } , remote: true) do |f|  %>
-	    <!-- <%= f.collection_select :id , @hotel, :id, :name,  {:include_blank => 'Please Select The Hotel'} %> -->
-	    <%= select_tag 'id', options_from_collection_for_select(@hotel, :id, :name) , {:include_blank => 'Please Select The Hotel'} %>
-	    <%= submit_tag "Go!" %>
-	  <% end %>
-
-
-	  <div id = "data">
-
-	  </div>
-
-	</div>
-</div>
